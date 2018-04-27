@@ -18,6 +18,7 @@ gem 'rack-cors'
 # Use to protect API from external calls
 gem 'rack-attack'
 
+
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 3.0'
 # Result pagination
