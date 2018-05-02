@@ -49,8 +49,13 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
-
-  # Filter lines from Rails gems in backtraces.
+  # Custom json helpers
+  config.include Requests::JsonHelpers, type: :request
+  # Custom Header helpers
+  config.include Requests::HeaderHelpers, type: :request
+  # Custom Serializer helpers
+  config.include Requests::SerializerHelpers, type: :request
+    # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
