@@ -13,7 +13,7 @@ module Api
       end
 
       def destroy
-        @tweet.unliked_by current_user
+        current_user.dislikes @tweet
       end
 
       private
